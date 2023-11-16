@@ -1,0 +1,442 @@
+/*Til mobilen*/
+/* Vores navbar */
+Header {
+    background: #f8ecc8; 
+    text-align: center; 
+    position: fixed; 
+    z-index: 999;
+    width: 100%;
+}
+
+/* jeg styler logoet */
+
+.nav_logo {
+    margin: 2px;
+    margin-top: 7px; 
+}
+
+.nav_logo img {
+    width: 150px;
+}
+
+/* jeg styler burgermenuen */
+
+.nav-toggle {
+    display: none; 
+}
+
+.nav-toggle-label {
+    position: absolute; 
+    top: 0;
+    left: 0; 
+    margin-left: 1em;  
+    height: 100%; 
+    display: flex; 
+    align-items: center; 
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before, 
+.nav-toggle-label span::after {
+    display: block; 
+    background: black; 
+    height: 2px;
+    width: 2em; 
+    border-radius: 2px; 
+    position: relative; 
+    
+}
+
+.nav-toggle-label span::before, 
+.nav-toggle-label span::after {
+    content: ''; 
+    position: absolute; 
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px; 
+    
+}
+
+.nav-toggle-label span::after {
+    top: 7px;    
+}
+
+nav {
+
+    text-align: left; 
+    position: absolute;
+    top: 100%;  
+    width: 100%;  
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out; 
+}
+
+/* jeg styler min navbar og punkterne under den */
+
+nav ul {
+    margin: 0;
+    list-style: none; 
+    height: 55vh;
+    background-image: url(../images/kopper-navbar.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+nav li {
+    margin-bottom: 2em; 
+    margin-left: 1em; 
+    
+}
+
+nav a {
+    color: #3e2e25; 
+    text-decoration: none; 
+    font-size: 1.2rem; 
+    text-transform: uppercase; 
+    opacity: 0;
+    transition: opacity 150ms ease-in-out ; 
+}
+
+/* jeg ændre links til når man holder musen over dem */
+
+nav a:hover {
+    color: #3e2e25; 
+    background-color: #f8ecc8;
+
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1); 
+    
+}
+
+.nav-toggle:checked ~ nav a { 
+    opacity: 1; 
+    transition: opacity 250ms ease-in-out 250ms; 
+}
+
+/*jeg styler mine submenuer  */
+
+.submenu1 , .submenu2 {
+    display: none;
+    position: absolute;
+    background-color: #F8eccb;
+    padding: 10px;
+    width: 10rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+li:hover .submenu1 , li:hover .submenu2 {
+    display: block;
+    position:absolute;
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+.submenu1 a , .submenu2 a {
+    display: block;
+    color: #3e2e25;
+    padding: 8px;
+    transition: background-color 0.3s ease; /* Glat farveovergang */
+}
+
+.submenu1 a:hover , .submenu2 a:hover {
+    background-color: #3e2e25; /* Baggrundsfarve ved hover */
+    color: #F8eccb;
+}
+
+
+
+    /*Baggrundfarve for hele kroppen*/
+    .body {
+        background-color:#f8eccb;
+        text-align: center;
+    }
+
+    /*her styledes artiklens tekst */
+    .vitilbyder-artikel {
+        color: #3e2e25;
+        font-family: sans-serif;
+        font-size:larger;
+        width: 90%;
+        margin: 5%;
+    }
+
+    /*Billederne har fået width og margin, så de ikke fylder hele siden, men man kan se de er placeret på en baggrund og der er plads imellem dem*/
+    .hylde {
+    width: 90%;
+    margin: 5%;  
+    }
+
+
+    .toejknap {
+        width: 80%;
+        margin: 10%;
+    }
+
+    .kreaknap {
+        width: 80%;
+        margin: 10%;
+    }
+
+    .workshopknap {
+        width: 80%;
+        margin: 10%;
+    }
+
+/* Styling af footer */
+    footer {
+        background-color: #6f82bc;
+    }
+  
+    footer, h5 {
+        font-size: 12px;
+        font-family: sans-serif;
+        text-align: center;
+    }
+
+    h5 {
+        font-size: medium;
+    }
+
+    /* Styling af socials */
+    footer, .socials {
+        padding: 5px;
+        color: #f8ecc8; 
+    }
+    
+    .socials a {
+        font-size: 19px;
+        color: inherit;
+        line-height: 38px;
+        display: inline-block;
+        border-radius: 50%;
+        margin: 0 20px;
+        opacity: 0.8; 
+    }
+    
+    /* Styling af icornerne, når hoveren er over */
+    .socials a:hover {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    
+    /* Styling af ul */
+    footer ul {
+        margin-top: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 12px;
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+    
+    footer ul li a:hover {
+        opacity: 1;
+    }
+
+    /* Jeg laver lidt mellemrum mellem hver sektion */
+
+    .åbningstider {
+        margin-top: 2rem;
+    }
+
+    .kontakt {
+        margin-top: 2rem;
+    }
+
+    .medier {
+        margin-top: 2rem;
+    }
+
+
+/*Til ipad*/
+
+@media screen and (min-width: 845px) {
+
+    /* Styling af navbar til ipad */
+    .nav-toggle-label {
+        display: none; 
+    }
+    
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(60%, 1fr) 1fr; 
+        background: #f8ecc8; 
+    }
+
+    .nav_logo {
+        grid-column: 2 / 3;
+    }
+    
+    .nav_logo img {
+        width: 150px;
+        
+    }
+    
+    nav {
+        all: unset; 
+        grid-column: 2 / 4; 
+        display: flex; 
+        justify-content: flex-end; 
+        align-items: center; 
+    }
+    
+    nav a {
+        opacity: 1; 
+        position: relative;
+    }
+    
+    nav ul {
+        display: flex; 
+        justify-content: flex-end;  
+        
+    }
+    
+    nav li {
+        margin-left: 3em; 
+        margin-bottom: 0;
+        font-family: 'futura-pt', sans-serif; 
+    }
+   
+    nav a::before {
+        content: ''; 
+        display: block;
+        height: 5px; 
+        background: #6f82bc; 
+        position: absolute; 
+        top: -.50em; 
+        left: 0;
+        right: 0;
+        transform: scale(0,1);
+        transition: transform ease-in-out 250ms;
+    }
+
+    /* Styling af body */
+    
+    .body {
+        background-color:#f8eccb;
+        text-align: center;
+    }
+
+    /*her styledes artiklens tekst */
+    .vitilbyder-artikel {
+        color: #3e2e25;
+        font-family: sans-serif;
+        font-size: 1.5rem;
+        width: 90%;
+        margin: 5%;
+    }
+    
+    .hylde {
+      width: 90%;
+      margin: 5%;  
+    }
+    
+    .toejknap {
+        width: 80%;
+        margin: 10%;
+    }
+    
+    .kreaknap {
+        width: 80%;
+        margin: 10%;
+    }
+    
+    .workshopknap {
+        width: 80%;
+        margin: 10%;
+    }
+
+}
+
+/*Til macbook*/
+@media screen and (min-width: 1280px) {
+    /* Styling af navbar  */
+
+    nav ul {
+        background-image: none;
+    }
+    
+    .nav-bar {
+        display: grid;
+        height: 8rem;
+    }
+
+    .nav_menu {
+        left: 20rem;
+        bottom: 4rem;
+    }
+
+    .submenu1 {
+        left: 21rem;
+        top: 4.1rem;
+    }
+
+    .nav_tilbyder {
+        left: 25rem;
+        bottom: 5rem;
+    }
+
+    .submenu2 {
+        left: 33rem;
+        top: 4.5rem;
+    }
+
+    .nav_om {
+        left: 30rem;
+        bottom: 5rem;
+    }
+
+    .nav_galleri {
+        left: 35rem;
+        bottom: 4rem;
+    }
+
+    /* Styling af body */
+  
+    /*Har lavet en grid-container, så jeg har kunnet placere min artikel og billede ved siden af hinanden */
+    .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+
+    /*Har lavet en flex-container, da jeg allerede har brugt en grid, og ville placere mine 3 "knapper" ved siden af hinanden*/
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    /* Style for forside-artikel elementet */
+    .vitilbyder-artikel {
+        width: 80%; 
+        margin: 30% 20% 20% 20%;
+        font-size: 2rem;
+    }
+
+    .hylde {
+    margin-top: 25%;
+    }
+
+    .flex-container > div {
+        width: 80%;    
+    }
+
+    /* Styling af footer */
+    footer {
+        display: flex;
+        justify-content: space-around;
+        background-color: #6f82bc;
+        padding: 20px;
+    }
+
+    .åbningstider, .kontakt, .medier {
+        text-align: center;
+        color: inherit;
+    }
+
+}

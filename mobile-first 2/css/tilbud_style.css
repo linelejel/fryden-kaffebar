@@ -1,0 +1,587 @@
+/* jeg starter med at reset min CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Vores navbar */
+Header {
+    background: #f8ecc8; 
+    text-align: center; 
+    position: fixed; 
+    z-index: 999;
+    width: 100%;
+}
+
+/* jeg styler logoet */
+
+.nav_logo {
+    margin: 2px;
+    margin-top: 7px; 
+}
+
+.nav_logo img {
+    width: 150px;
+}
+
+/* jeg styler burgermenuen */
+
+.nav-toggle {
+    display: none; 
+}
+
+.nav-toggle-label {
+    position: absolute; 
+    top: 0;
+    left: 0; 
+    margin-left: 1em;  
+    height: 100%; 
+    display: flex; 
+    align-items: center; 
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before, 
+.nav-toggle-label span::after {
+    display: block; 
+    background: black; 
+    height: 2px;
+    width: 2em; 
+    border-radius: 2px; 
+    position: relative; 
+    
+}
+
+.nav-toggle-label span::before, 
+.nav-toggle-label span::after {
+    content: ''; 
+    position: absolute; 
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px; 
+    
+}
+
+.nav-toggle-label span::after {
+    top: 7px;    
+}
+
+nav {
+
+    text-align: left; 
+    position: absolute;
+    top: 100%;  
+    width: 100%;  
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out; 
+}
+
+/* jeg styler min navbar og punkterne under den */
+
+nav ul {
+    margin: 0;
+    list-style: none; 
+    height: 55vh;
+    background-image: url(../images/kopper-navbar.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+nav li {
+    margin-bottom: 2em; 
+    margin-left: 1em; 
+    
+}
+
+nav a {
+    color: #3e2e25; 
+    text-decoration: none; 
+    font-size: 1.2rem; 
+    text-transform: uppercase; 
+    opacity: 0;
+    transition: opacity 150ms ease-in-out ; 
+}
+
+/* jeg ændre links til når man holder musen over dem */
+
+nav a:hover {
+    color: #3e2e25; 
+    background-color: #f8ecc8;
+
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1); 
+    
+}
+
+.nav-toggle:checked ~ nav a { 
+    opacity: 1; 
+    transition: opacity 250ms ease-in-out 250ms; 
+}
+
+/*jeg styler mine submenuer  */
+
+.submenu1 , .submenu2 {
+    display: none;
+    position: absolute;
+    background-color: #F8eccb;
+    padding: 10px;
+    width: 10rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+li:hover .submenu1 , li:hover .submenu2 {
+    display: block;
+    position:absolute;
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+.submenu1 a , .submenu2 a {
+    display: block;
+    color: #3e2e25;
+    padding: 8px;
+    transition: background-color 0.3s ease; /* Glat farveovergang */
+}
+
+.submenu1 a:hover , .submenu2 a:hover {
+    background-color: #3e2e25; /* Baggrundsfarve ved hover */
+    color: #F8eccb;
+}
+
+
+/* jeg indstiller først genrelt font for min body, farve og baggrundsfarve  */
+
+body {
+    font-family: Myriad-pro, sans-serif;
+    color: #3e2e25;
+    background-color: #F8eccb;
+}
+
+/* jeg styler nu mine h2, da de er ens for alle, som mobil størrelse*/
+
+h2 {
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+/* jeg styler nu den første sektion, så den placere sig i midten af skærmen */
+
+.morgentilbud {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+/* jeg styler det første billede  */
+
+.morgentilbud-billede {
+ margin-bottom: 5%;
+ width: 20rem;
+}
+
+
+/* jeg styler nu teksten (p) til min første sektion */
+
+.tekst-morgentilbud {
+    text-align: center;
+    width: 15rem;
+    margin-left: 3rem;
+}
+
+/* jeg styler nu min illustration, så den fylder mere af skærmen */
+
+.bmo-figur {
+    width: 20rem;
+}
+
+/* jeg styler nu min anden sektion, så den passer mobil størrelse  */
+
+.kaffekort {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 4px solid #6f82be;
+    padding: 2rem;
+}
+
+/* jeg styler nu billedet og teksten (p), så den passer til skærmen */
+
+.kaffekop-ovenfra {
+    width: 10rem;
+    margin-left: 2rem;
+}
+
+.tekst-kaffekort {
+    text-align: center;
+    width: 15rem;
+}
+
+/* jeg styler nu min tredje sektion, så den passer mobil størrelse  */
+
+.stempelkort {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* jeg styler nu teksten og billeder, så den passer til mobil skærm */
+
+.tekst-stempelkort {
+    text-align: center;
+    width: 15rem;
+}
+
+.kaffekort a {
+    text-decoration: none;
+    color: #3e2e25;
+}
+
+.kaffekort a:hover {
+    color: #6f82bc;
+}
+
+.stempelkort-billede {
+    width: 15rem;
+    padding-top: 2rem;
+}
+
+/* jeg styler nu min footer */
+
+/* Styling af footer */
+footer {
+    background-color: #6f82bc;
+
+  }
+  
+  footer, h5 {
+    font-size: 12px;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  h5 {
+    font-size: medium;
+  }
+
+  /* Styling af socials */
+  footer, .socials {
+    padding: 5px 0;
+    color: #f8ecc8; 
+  }
+  
+  .socials a {
+      font-size: 19px;
+      color: inherit;
+      line-height: 38px;
+      display: inline-block;
+      border-radius: 50%;
+      margin: 0 20px;
+      opacity: 0.8; 
+  }
+  
+  /* Styling af icornerne, når hoveren er over */
+  .socials a:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  
+  /* Styling af ul */
+  footer ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+  
+  footer ul li a:hover {
+    opacity: 1;
+  }
+
+  /* jeg laver lidt mellemrum mellem hver sektion */
+
+  .åbningstider {
+    margin-top: 2rem;
+  }
+
+  .kontakt {
+    margin-top: 2rem;
+  }
+
+  .medier {
+    margin-top: 2rem;
+  }
+
+
+/* Jeg styler nu min CSS til iPad air */
+@media screen and (min-width: 845px) {
+
+    /* Styling af navbar til ipad */
+    .nav-toggle-label {
+        display: none; 
+    }
+    
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(60%, 1fr) 1fr; 
+        background: #f8ecc8; 
+    }
+
+    .nav_logo {
+        grid-column: 2 / 3;
+    }
+    
+    .nav_logo img {
+        width: 150px;
+        
+    }
+    
+    nav {
+        all: unset; 
+        grid-column: 2 / 4; 
+        display: flex; 
+        justify-content: flex-end; 
+        align-items: center; 
+    }
+    
+    nav a {
+        opacity: 1; 
+        position: relative;
+    }
+    
+    nav ul {
+        display: flex; 
+        justify-content: flex-end;  
+        
+    }
+    
+    nav li {
+        margin-left: 3em; 
+        margin-bottom: 0;
+        font-family: 'futura-pt', sans-serif; 
+    }
+   
+    nav a::before {
+        content: ''; 
+        display: block;
+        height: 5px; 
+        background: #6f82bc; 
+        position: absolute; 
+        top: -.50em; 
+        left: 0;
+        right: 0;
+        transform: scale(0,1);
+        transition: transform ease-in-out 250ms;
+    }
+
+
+    /* jeg styler mine overskirfter ens */
+h2 {
+    font-size: 3rem;
+}
+
+/* jeg styler den første sektion, der omhandler morgentilbudet */
+
+.morgentilbud-billede {
+    width: 35rem;
+}
+
+.tekst-morgentilbud {
+    font-size: 2rem;
+    width: 30rem;
+}
+
+.bmo-figur {
+    width: 35rem;
+}
+
+/* jeg styler den anden sektion - der omhandler kaffekort  */
+
+.kaffekop-ovenfra {
+    width: 30rem;
+}
+
+.tekst-kaffekort {
+    width: 35rem;
+    font-size: 2rem;
+}
+
+/* jeg styler nu min tredjesektion, så den passer til Ipad air */
+
+.tekst-stempelkort {
+    font-size: 2rem;
+    width: 35rem;
+}
+
+.stempelkort-billede {
+    width: 35rem;
+}
+
+/* jeg styler nu min footer, så den passer i størrelsen til Ipad air */
+
+.åbningstider {
+    font-size: 1rem;
+    margin-top: 1rem;
+    line-height: 2rem;
+}
+
+h5 {
+    font-size: 1rem;
+
+}
+
+.kontakt {
+    font-size: 1rem;
+    margin-top: 1rem;
+    line-height: 2rem;
+}
+
+.socials a {
+   font-size: 2rem;
+   margin-top: 1rem;
+   line-height: 2rem;
+}
+
+}
+ 
+/* Jeg styler nu min CSS til en generel macbook computer størrelse  */
+@media screen and (min-width: 1280px) {
+
+    /* Styling af navbar  */
+
+    nav ul {
+        background-image: none;
+    }
+    
+    .nav-bar {
+        display: grid;
+        height: 8rem;
+    }
+
+    .nav_menu {
+        left: 20rem;
+        bottom: 4rem;
+    }
+
+    .submenu1 {
+        left: 21rem;
+        top: 4.1rem;
+    }
+
+    .nav_tilbyder {
+        left: 25rem;
+        bottom: 5rem;
+    }
+
+    .submenu2 {
+        left: 33rem;
+        top: 4.5rem;
+    }
+
+    .nav_om {
+        left: 30rem;
+        bottom: 5rem;
+    }
+
+    .nav_galleri {
+        left: 35rem;
+        bottom: 4rem;
+    }
+
+    /* Styling af body */
+    /* jeg styler morgentilbudet, så tekst og billede er ved siden af hinanden */
+.morgentilbud-billede-tekst {
+   display: flex;
+}
+
+.tekst-morgentilbud {
+    width: 20rem;
+   margin-top: 5rem;
+    font-size: 1.5rem;
+    margin-left: 5rem;
+}
+
+.morgentilbud-billede {
+    width: 20rem;
+}
+
+.bmo-figur {
+    width: 20rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+/* jeg styler sektionen med kaffekort, så den passer til skærmen */
+
+.kaffekort-billede-tekst {
+    display: flex;
+}
+
+.tekst-kaffekort {
+    margin-top: 5rem;
+    width: 15rem;
+    font-size: 1.5rem;
+    margin-right: 10rem;
+}
+
+.kaffekop-ovenfra {
+    width: 30rem;
+    margin-right: 10rem;
+}
+
+/* jeg styler sektionen med stempelkort, så den passer til skærmstørrelsen */
+
+.stempelkort-billede-tekst {
+    display: flex;
+}
+
+.tekst-stempelkort {
+    width: 20rem;
+    margin: 5rem;
+    font-size: 1.5rem;
+    margin-top: 7rem;
+    
+}
+
+.stempelkort-billede {
+    width: 20rem;
+    
+}
+
+/* jeg styler nu mon footer, så de tre kategorier bliver placeret ved siden af hinnanden  */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+    padding: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.åbningstider {
+    line-height: 2.5rem;
+}
+
+.kontakt {
+    line-height: 2.5rem;
+}
+
+.medier {
+    line-height: 2.5rem;
+}
+
+}

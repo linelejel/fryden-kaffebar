@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="kaffe,kaffebar,morgentilbud,stempelkort, klippekort">
+    <meta name="description" content="Her på siden kan man se hvad vi har af tilbud hos Fryden Kaffebar. Det består af et morgentilbud, klippekort til kaffe og stempelkort.">
+    <!-- Link til favicon -->
+    <link rel="shortcut icon" href="images/favicon.png">
+    <!-- Link til stylesheet -->
+    <link rel="stylesheet" href="css/tilbud_style.css">
+    <!-- Link til font awesome iconerne -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Tilbudssiden for Fryden Kaffebar </title>
+</head>
+
+<body>
+    <header>
+        <div class="nav-bar">
+            <div class="nav_logo"><a href="index.html"> <img src="images/logo.png" alt="logo"></a> 
+            </div>
+            
+            <input type="checkbox" id="nav-toggle" class="nav-toggle"> 
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>  
+              <!-- laver en nav med en ul og indsætter menupunkter og submenuer -->
+          <nav> 
+            <ul class="navbar">
+              <li><a href="menu.html" class="nav_menu">MENU</a> 
+                    <!-- Subnavbar -->
+                    <div class="submenu1">
+                    <a href="tilbud.html">TILBUD</a></div>
+                </li> 
+              <li><a href="vi_tilbyder.html" class="nav_tilbyder">VI TILBYDER</a>
+                <!-- Subnavbar -->
+                  <div class="submenu2">
+                  <a href="toejstand.html">SECONDHAND STAND</a>
+                  <a href="krea_hylde.html">KREA-HYLDE</a>
+                  <a href="workshop.html">WORKSHOPS</a></div>
+               </li> 
+        
+            <li><a href="om_fryden.html" class="nav_om">OM FRYDEN</a></li>
+            <li><a href="galleri.html" class="nav_galleri">GALLERI</a></li>
+          </ul>
+              </nav>
+            </div>
+              <label for="nav-toggle" class="nav-toggle-label">
+              <span></span>
+              </label>
+         </header>
+
+    <!-- jeg laver nu mit main afsnit, som er opdelt i sectioner -->
+    <!-- min første sektion er indholdet til morgentilbud, bestående af H2, picture og p -->
+<main>
+    <section class="morgentilbud">
+        <H2 class="titel-morgentilbud">MORGENTILBUD</H2>
+        <div class="morgentilbud-billede-tekst">
+        <picture><img class="morgentilbud-billede" src="images/morgentilbud.webP" alt="billede af kaffe og boller med ost, morgentilbud hos fryden kaffebar"></picture>
+        <p class="tekst-morgentilbud">Alle ugens åbningsdage kan du få vores morgentilbud bestående af en bolle med ost eller marmelade, samt en valgfri drikkevare.
+            <br> <br> Tilbuddet varer indtil kl. 11 og koster kun 60kr.</p>
+        </div>
+        <picture><img class="bmo-figur" src="images/bmo.webp" alt="illustration af en bolle med ost"></picture>
+    </section>
+
+    <!-- men anden sektion omhandler Kaffekort, herunder er der overskrift, billeder og tekst tilhørende -->
+
+    <section class="kaffekort">
+        <h2>KAFFEKORT</h2>
+        <div class="kaffekort-billede-tekst">
+        <picture><img class="kaffekop-ovenfra" src="images/kaffekop.webp" alt="Kaffe kop med mælk i fra oven"></picture>
+        <p class="tekst-kaffekort">Køb et 10-turskort og vælg frit mellem vores kaffeudvalg <br> <br> <a href="menu.html">Se menuen her </a> <br> <br> Pris 310 kr.</p>
+        </div>
+    </section>
+
+   <!-- jeg laver en sidste sektion som handler om Stempelkort - herunder er også h2, billeder og tekst -->
+    <section class="stempelkort">
+        <h2>STEMPELKORT</h2>
+        <div class="stempelkort-billede-tekst">
+        <p class="tekst-stempelkort">Få et klip for hver kaffe du køber hos os. <br> Når du har købt 9 kopper, så giver vi den 10. kop 
+            <br> <br> Download vores stempelkort og læg den ind i din wallt på din Iphone, så mister du den aldrig </p>
+        <picture><img class="stempelkort-billede" src="images/stempelkort.webp" alt="Stempelkort til fryden kaffebar, få hver 10. kop gratis"></picture>
+        </div>
+    </section>
+
+</main>
+     <!-- til sidst indsætter jeg min footer -->
+
+<footer>
+
+        <div class="åbningstider">
+            <h5>ÅBNINGSTIDER</h5>
+            <ul>     
+                <li>MAN-FRE: 9 - 17</li>
+                <li>LØR: 10 - 17</li>
+                <li>SØN: Lukket</li>
+            </ul>
+        </div>
+
+        <div class="kontakt">
+        <h5>KONTAKT</h5>
+            <ul>
+                 <li>TELEFON: 60 17 78 09</li>
+                <li>MAIL: frydenkaffebar@gmail.com</li>
+                <li>ADRESSE: Mejlgade 40, 8000 Aarhus C</li>
+            </ul>
+        </div>
+
+
+        <div class="medier">
+            <h5>SOCIALE MEDIER</h5>
+            <div class="socials">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    
+</footer>
+
+
+
+</body>
+</html>
